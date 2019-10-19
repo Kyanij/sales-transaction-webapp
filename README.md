@@ -31,11 +31,13 @@ ng serve
 
 # Some snapshot of Web App
 
-!["Invoice"](/img/demo1.png "Generate Invoice")
+!["Add New Customer"](/img/demo3.png "Add New Custome")
 
 !["List of Transaction"](/img/demo2.png "List of Transactions")
 
-!["Add New Customer"](/img/demo3.png "Add New Custome")
+!["Invoice"](/img/demo1.png "Generate Invoice")
+
+
  
 
 
