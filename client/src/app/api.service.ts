@@ -1,28 +1,23 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import  UserResponse  from './data';
-
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
-
-
 export class ApiService {
+  constructor(private httpClient: HttpClient) {}
+  product_url = "http://localhost:3000/api/product";
+  customer_url = "http://localhost:3000/api/customer";
+  transaction_url = "http://localhost:3000/api/transaction";
+  invoice_url = "http://localhost:3000/api/generate-invoice";
 
-  constructor(private httpClient: HttpClient) { }
-  product_url = 'http://localhost:3000/api/product';
-  customer_url = 'http://localhost:3000/api/customer';
-  transaction_url = 'http://localhost:3000/api/transaction';
-  invoice_url = 'http://localhost:3000/api/generate-invoice';
-
-  // Product 
+  // Product
   public getProduct() {
     return this.httpClient.get(this.product_url);
   }
 
   public addProduct(item) {
-    return this.httpClient.post(this.product_url,item);
+    return this.httpClient.post(this.product_url, item);
   }
 
   public deleteProduct(itemId) {
@@ -33,10 +28,9 @@ export class ApiService {
     return this.httpClient.put(`${this.product_url}/${itemId}`, item);
   }
 
-  public getSingleProduct(itemId) { 
+  public getSingleProduct(itemId) {
     return this.httpClient.get(`${this.product_url}/${itemId}`);
   }
-
 
   // Customer
 
@@ -66,7 +60,7 @@ export class ApiService {
   }
 
   public addTransaction(value) {
-    return this.httpClient.post(this.transaction_url,value);
+    return this.httpClient.post(this.transaction_url, value);
   }
 
   public getSingleTransaction(id) {
@@ -85,6 +79,4 @@ export class ApiService {
   public generateInvoice(id) {
     return this.httpClient.get(`${this.invoice_url}/${id}`);
   }
-
-  
 }

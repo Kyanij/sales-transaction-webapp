@@ -1,18 +1,34 @@
-
-
-  <form #productForm = "ngForm" (ngSubmit) ="onSubmit(productForm.value)">
-    <div class="form-group">
+<form #productForm="ngForm" (ngSubmit)="onSubmit(productForm.value)">
+  <div class="form-group">
     <div class="form-group">
       <label>Product Name</label>
-      <input name="name" ngModel  type="name" class="form-control" id="exampleInputPassword1" placeholder="Enter Product Name">
+      <input
+        name="name"
+        ngModel
+        type="name"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Enter Product Name"
+      />
     </div>
     <label>Product Description </label>
-    <input name="description" ngModel type="name" class="form-control" placeholder="Enter Product Description " >
+    <input
+      name="description"
+      ngModel
+      type="name"
+      class="form-control"
+      placeholder="Enter Product Description "
+    />
   </div>
-    <div class="form-group">
-        <label>Rate</label>
-        <input name ="rate" ngModel type="number" class="form-control" placeholder="Enter Product Rate">
-      </div> 
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-
+  <div class="form-group">
+    <label>Rate</label>
+    <input
+      name="rate"
+      ngModel
+      type="number"
+      class="form-control"
+      placeholder="Enter Product Rate"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

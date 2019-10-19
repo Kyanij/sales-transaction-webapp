@@ -1,21 +1,43 @@
-
-
-  <form #userForm = "ngForm" (ngSubmit) ="onSubmit(userForm.value)">
-    <div class="form-group">
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+  <div class="form-group">
     <div class="form-group">
       <label>Customer Name</label>
-      <input name = "name" ngModel type="name" class="form-control" id="exampleInputPassword1" placeholder="Enter Customer Name">
+      <input
+        name="name"
+        ngModel
+        type="name"
+        class="form-control"
+        placeholder="Enter Customer Name"
+      />
     </div>
     <div class="form-group">
-        <label>Address</label>
-        <input name = "address" ngModel type="name" class="form-control" placeholder="Enter Address">
-      </div>
-      <div class="form-group">
-        <label>Phone</label>
-        <input name = "phone" ngModel type="number" class="form-control" placeholder="Enter Phone Number">
-      </div>
-      <label>Email </label>
-      <input  name = "email" ngModel type="name" class="form-control" placeholder="Enter Email id " >
+      <label>Address</label>
+      <input
+        name="address"
+        ngModel
+        type="name"
+        class="form-control"
+        placeholder="Enter Address"
+      />
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+    <div class="form-group">
+      <label>Phone</label>
+      <input
+        name="phone"
+        ngModel
+        type="number"
+        class="form-control"
+        placeholder="Enter Phone Number"
+      />
+    </div>
+    <label>Email </label>
+    <input
+      name="email"
+      ngModel
+      type="name"
+      class="form-control"
+      placeholder="Enter Email id "
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

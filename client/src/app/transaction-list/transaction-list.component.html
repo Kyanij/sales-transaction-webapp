@@ -1,38 +1,51 @@
-<button [routerLink]="['/transaction/add']" class="btn btn-primary tbtn">Add Transaction</button>
-
+<button [routerLink]="['/transaction/add']" class="btn btn-primary tbtn">
+  Add Transaction
+</button>
 
 <table class="table table-hover">
-    <thead class="thead-light">
-      <tr>
-        <th scope="col">Customer Name</th>
-        <th scope="col">Product Name</th>
-        <th scope="col">Rate</th>
-        <th scope="col">Quantity</th>
-        <th scope="col">Total</th>
-        <th scope="col">Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor = "let transaction of transactions">
-        <td>{{transaction.customer_name }}</td>
-        <td>{{transaction.product_name }}</td>
-        <td>{{transaction.rate}}</td>
-        <td>{{transaction.quantity}} </td>
-        <td>{{transaction.Total}} </td>
-        <td> 
-          <div class="action center">
-          <button class="btn btn-success editbtn" (click) = "onSelect(transaction.transaction_id)">
-           <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
-            Edit</button>
-            <button class="btn btn-secondary delbtn" (click) = "deleteTransaction(transaction.transaction_id)" >
-           <i class="fa fa-trash fa-2x" aria-hidden="true"></i>
-           Delete</button>
-           <button class="btn btn-info invoice btn" (click) = "generateInvoice(transaction.customer_id)" >
-               Generate Invoice</button>
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Customer Name</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Rate</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Total</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transaction of transactions">
+      <td>{{ transaction.customer_name }}</td>
+      <td>{{ transaction.product_name }}</td>
+      <td>{{ transaction.rate }}</td>
+      <td>{{ transaction.quantity }}</td>
+      <td>{{ transaction.Total }}</td>
+      <td>
+        <div class="action center">
+          <button
+            class="btn btn-success editbtn"
+            (click)="onSelect(transaction.transaction_id)"
+          >
+            <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
+            Edit
+          </button>
+          <button
+            class="btn btn-secondary delbtn"
+            (click)="deleteTransaction(transaction.transaction_id)"
+          >
+            <i class="fa fa-trash fa-2x" aria-hidden="true"></i>
+            Delete
+          </button>
+          <button
+            class="btn btn-info invoice btn"
+            (click)="generateInvoice(transaction.customer_id)"
+          >
+            Generate Invoice
+          </button>
         </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  
-  <router-outlet></router-outlet>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<router-outlet></router-outlet>
