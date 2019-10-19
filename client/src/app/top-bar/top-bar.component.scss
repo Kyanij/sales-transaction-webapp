@@ -1,0 +1,26 @@
+.top-bar {
+    border:0px solid red;
+    width:100%;
+    background-color: #155a9e;
+    color:white;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    h1 {
+        font-weight: bold;
+    }
+    a {
+        color:white;
+        font-size:2rem;
+        border:0px solid white;
+        padding:1rem;
+     
+    }
+
+}
+
+#top-title {
+    font-weight: bold;
+    color:rgb(23, 221, 99);
+    font-size:3rem;
+}

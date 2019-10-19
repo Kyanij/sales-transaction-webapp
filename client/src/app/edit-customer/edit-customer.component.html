@@ -1,0 +1,21 @@
+<form #userForm = "ngForm" (ngSubmit) ="onSubmit(cId,userForm.value)">
+    <div *ngFor = "let u of user">
+    <div class="form-group">
+    <div class="form-group">
+      <label>Customer Name</label>
+      <input name = "name" [ngModel] = "u.customer_name" type="name" class="form-control" id="exampleInputPassword1" placeholder="Enter Customer Name">
+    </div>
+    <div class="form-group">
+        <label>Address</label>
+        <input name = "address" [ngModel] = "u.address" type="name" class="form-control" placeholder="Enter Address">
+      </div>
+      <div class="form-group">
+        <label>Phone</label>
+        <input name = "phone" [ngModel] = "u.phone" type="number" class="form-control" placeholder="Enter Phone Number">
+      </div>
+      <label>Email </label>
+      <input  name = "email" [ngModel] = "u.email" type="name" class="form-control" placeholder="Enter Email id " >
+    </div>
+    <button type="submit" class="btn btn-primary" >Submit</button>
+</div>
+  </form>

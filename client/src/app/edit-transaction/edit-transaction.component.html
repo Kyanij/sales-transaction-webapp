@@ -1,0 +1,27 @@
+<form #transactionForm = "ngForm" (ngSubmit) ="onSubmit(tId, transactionForm.value)">
+    <div class="form-group">
+      <div *ngFor = "let t of transaction">
+    <div class="form-group">
+       <label>Customer Name </label>
+      <select class="browser-default custom-select custom-select-lg mb-3" name = "customer_id" [ngModel] = "t.customer_id">
+        <option *ngFor = "let customer of customers"  [ngValue] = "customer.customer_id">
+            {{customer.customer_name}}
+       </option>
+      </select>        
+    </div>
+      <div class="form-group">
+       <label>Product Name </label>
+        <select class="browser-default custom-select custom-select-lg mb-3" name = "product_id"  [(ngModel)] ="t.product_id">
+          <option  *ngFor = "let product of products" [ngValue] = "product.product_id" >
+              {{product.product_name}}
+          </option>
+        </select>        
+      </div>
+      <div class="form-group">
+    <label>Quantity </label>
+    <input  name = "quantity" [(ngModel)] = "t.quantity" type="name" class="form-control" placeholder="Enter Quantity " >
+  </div>
+  </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
